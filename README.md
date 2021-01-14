@@ -1,29 +1,22 @@
-# vuetest
 
-## Project setup
-```
-yarn install
-```
+# 单元测试思维逻辑
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## given > when > then
 
-### Compiles and minifies for production
-```
-yarn build
-```
+### given
 
-### Run your unit tests
-```
-yarn test:unit
-```
+测试的参数
 
-### Lints and fixes files
-```
-yarn lint
-```
+### when
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+测试在哪些地方做什么
+
+### then
+
+测试哪些结果
+
+## 测试金字塔
+
+为了维持金字塔形状，一个健康、快速、可维护的测试组合应该是这样的：写许多小而快的单元测试。适当写一些更粗粒度的测试，写很少高层次的端到端测试。注意不要让你的测试变成冰淇淋那样子，这对维护来说将是一个噩梦，并且跑一遍也需要太多时间。（via测试金字塔实战 – ThoughtWorks洞见）
+
+## 

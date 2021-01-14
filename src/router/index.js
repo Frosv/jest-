@@ -1,6 +1,15 @@
+/*
+ * @Author: your name
+ * @Date: 2021-01-11 11:22:09
+ * @LastEditTime: 2021-01-14 09:08:36
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /vuetest/src/router/index.js
+ */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import element from '../views/element.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +18,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/element',
+    name: 'element',
+    component: element
   },
   {
     path: '/about',

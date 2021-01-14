@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`element 测试快照 1`] = `
+<div>
+  <div class="el-input">
+    <!----><input type="text" autocomplete="off" id="account" placeholder="请输入内容" class="el-input__inner">
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+  </div> <button type="button" class="el-button el-button--primary" id="login">
+    <!---->
+    <!----><span>登录</span>
+  </button>
+  <div></div>
+  <div id="login2">123</div>
+</div>
+`;
