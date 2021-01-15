@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-11 14:13:36
- * @LastEditTime: 2021-01-14 15:57:25
+ * @LastEditTime: 2021-01-15 09:13:04
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vuetest/tests/unit/hello.spec.js
@@ -11,7 +11,7 @@ import {
   createLocalVue,
   shallowMount
 } from '@vue/test-utils'
-import element from '@/views/element.vue'
+import element from '@/views/element-input-button.vue'
 import ElementUI from 'element-ui'
 const localVue = createLocalVue()
 
