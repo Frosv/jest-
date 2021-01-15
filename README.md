@@ -1,6 +1,20 @@
 
 # 单元测试思维逻辑
 
+## 前言
+
+由于目前jest相关文档中文翻译进度缓慢与网络上针对vue+element+jest单元测试资料很少，个人将通过自己的学习能力将自己对单元测试理解编写出来，提供给大家学习
+
+## 文件结构
+
+src ->
+  views ->
+    hello.vue -- 简单vue结构
+    element.vue -- 加入element 简单登录页面
+tests ->
+  unit ->
+    element-ui.spec.js -- 针对加入elemnt组件测试
+
 ## given > when > then
 
 ### given

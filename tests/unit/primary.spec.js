@@ -1,17 +1,17 @@
 /*
  * @Author: your name
  * @Date: 2021-01-11 14:13:36
- * @LastEditTime: 2021-01-14 09:02:29
+ * @LastEditTime: 2021-01-14 16:19:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: /vuetest/tests/unit/hello.spec.js
+ * @FilePath: /vuetest/tests/unit/primary.spec.js
  */
 
 import { shallowMount } from '@vue/test-utils'
-import hello from '@/views/hello.vue'
+import primary from '@/views/primary.vue'
 
-describe('hello', () => {
-  const wrapper = shallowMount(hello)
+describe('primary', () => {
+  const wrapper = shallowMount(primary)
   it('测试快照', () => {
     expect(wrapper).toMatchSnapshot()
   })

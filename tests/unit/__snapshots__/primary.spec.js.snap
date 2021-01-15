@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`hello 测试快照 1`] = `
+exports[`primary 测试快照 1`] = `
 <div>
   <h2>
     1
