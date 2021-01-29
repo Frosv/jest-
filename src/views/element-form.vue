@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-01-15 09:35:07
- * @LastEditTime: 2021-01-15 15:40:16
+ * @LastEditTime: 2021-01-26 09:43:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vuetest/src/views/element-form.vue
@@ -13,10 +13,15 @@
     label-width="80px"
   >
     <el-form-item label="活动名称">
-      <el-input id="actived" v-model="form.name"></el-input>
+      <el-input
+        id="actived"
+        v-model="form.name"
+      ></el-input>
     </el-form-item>
     <el-form-item label="活动区域">
       <el-select
+        :popper-append-to-body='false'
+        ref="select"
         v-model="form.region"
         placeholder="请选择活动区域"
       >
@@ -88,6 +93,7 @@
     </el-form-item>
     <el-form-item>
       <el-button
+        ref="submit"
         type="primary"
         @click="onSubmit"
       >立即创建</el-button>

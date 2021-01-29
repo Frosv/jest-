@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-01-14 08:53:43
- * @LastEditTime: 2021-01-14 15:33:12
+ * @LastEditTime: 2021-01-29 11:17:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vuetest/src/views/element.vue
@@ -33,6 +33,9 @@ export default {
       if (val && val.length < 5) {
         this.successMsg = '字符长度小于5'
       }
+    },
+    save () {
+      sessionStorage.setItem('name', '123')
     }
   }
 }

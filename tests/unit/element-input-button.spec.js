@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-11 14:13:36
- * @LastEditTime: 2021-01-15 16:24:25
+ * @LastEditTime: 2021-01-29 11:18:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vuetest/tests/unit/hello.spec.js
@@ -63,5 +63,10 @@ describe('element', () => {
       ref: 'account'
     }).vm.$emit('input', 1111)
     expect(wrapper.vm.successMsg).toEqual('字符长度小于5')
+  })
+
+  it('save', () => {
+    wrapper.vm.save()
+    expect(sessionStorage.getItem('name')).toEqual('123')
   })
 })

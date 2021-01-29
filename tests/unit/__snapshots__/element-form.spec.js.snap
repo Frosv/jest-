@@ -30,7 +30,7 @@ exports[`elementForm 测试快照 1`] = `
           <!---->
         </div>
         <transition-stub name="el-zoom-in-top">
-          <el-select-menu-stub transformorigin="true" placement="bottom-start" boundariespadding="0" offset="0" visiblearrow="true" arrowoffset="35" appendtobody="true" popperoptions="[object Object]" style="display: none;">
+          <el-select-menu-stub transformorigin="true" placement="bottom-start" boundariespadding="0" offset="0" visiblearrow="true" arrowoffset="35" popperoptions="[object Object]" style="display: none;">
             <el-scrollbar-stub wrapclass="el-select-dropdown__wrap" viewclass="el-select-dropdown__list" tag="ul" class="" style="">
               <!---->
               <li class="el-select-dropdown__item"><span>区域一</span></li>

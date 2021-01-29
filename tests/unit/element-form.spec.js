@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-15 09:41:12
- * @LastEditTime: 2021-01-15 16:08:28
+ * @LastEditTime: 2021-01-26 09:43:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vuetest/tests/unit/element-form.spec.js
@@ -58,11 +58,26 @@ describe('elementForm', () => {
     expect(wrapper.vm.form.name).toEqual('123')
   })
 
-  it('模拟用户点击select', () => {
+  it('模拟用户点击select', async () => {
+    const el = wrapper.findComponent({
+      ref: 'select'
+    })
+    await el.vm.$emit('fouce')
+    // 显示option 找到对应li
+    console.log(wrapper.find('.el-select-dropdown'))
+    // const options = wrapper.find('.el-select-dropdown').findAll('li')
+    // 找到第一个选项选中
+    // await options.at(1).setSelected()
 
+    // expect(wrapper.vm.form.region).toBe('shanghai')
   })
 
+  // 只测试点击事件其实就已经完成覆盖率
   it('点击提交', () => {
-
+    const el = wrapper.findComponent({
+      ref: 'submit'
+    })
+    el.vm.$emit('click')
+    expect(el.emitted().click).toBeTruthy()
   })
 })
