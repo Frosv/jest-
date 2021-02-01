@@ -19,6 +19,80 @@
 
 单元测试的测试用例要覆盖常用的输入组合、边界条件和异常。
 
+## Mocha 与 Jest
+
+### Mocha
+
+Mocha是JavaScript界中最受欢迎的一款单元测试框架。
+
+1. 灵活性
+  Mocha比较灵活，和更多的一些库结合使用。
+
+2. 资料较多
+  Mocha是比较年老的测试框架，在JavaScript界中更加广泛地使用。因此Mocha的community比较大，可参考的文献较多，测试过程中遇到一些问题，可以上网查一查可以获取不少的帮助。
+
+### Jest
+
+1. Jest容易安装配置
+  Jest可以说是零配置的，它会自动识别一些测试文件。只要用npm安装jest之后运行jest，即可完成测试，非常容易。
+
+2. Jest提供snapshot功能
+  snapshot功能能够确保UI不会意外被改变。Jest会把结果值保存在一个文件当中，每次进行测试的时候会把测试值与文件中的结果值进行比较，如果两个结果值不同，那么开发者可以选择要么改变代码，要么替代结果文件
+
+### 差异
+
+```js code
+'use strict'
+var Math = {
+  add(a, b) {
+    return a + b;
+  }
+}
+module.exports = Math;
+```
+
+```js jest
+jest.unmock('../Math'); // unmock to use the actual implementation of Math
+
+var math = require('../Math');
+
+describe("Math", function() {
+  var firstOperand;
+  var secondOperand;
+
+  beforeEach(function() {
+    firstOperand = 2;
+    secondOperand = 3;
+  });
+
+  it("should add two numbers", function() {
+    var result = math.add(firstOperand, secondOperand);
+    expect(result).toEqual(firstOperand + secondOperand);
+  });
+
+});
+```
+
+```js mocha
+var assert = require('assert'); // nodejs 内建断言
+var math = require('../Math');
+
+describe("Math", function() {
+  var firstOperand;
+  var secondOperand;
+
+  beforeEach(function() {
+    firstOperand = 2;
+    secondOperand = 3;
+  });
+
+  it("should add two numbers", function() {
+    var result = math.add(firstOperand, secondOperand);
+    assert.equal(result, firstOperand + secondOperand);
+  });
+
+});
+```
 ## 为什么选Jest
 
 容易上手，开箱即用，功能全面
