@@ -9,11 +9,9 @@ export default {
   },
   methods: {
     init () {
-      const user = sessionStorage.getItem('user')
-      console.log(user)
-      if (user) {
-        console.log(user)
-      }
+      window.addEventListener('test',() =>{
+        console.log(123)
+      })
     }
   }
 }

@@ -9,7 +9,14 @@ export default {
   },
   methods: {
     init () {
-
+      // get
+      this.$http.get('/roles/getPersonnelInfoRoles', {
+        params: {
+          key: 'value'
+        }
+      }).then((res) => {
+        console.log(res)
+      })
     }
   }
 }

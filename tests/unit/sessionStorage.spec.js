@@ -8,11 +8,17 @@
  */
 
 import { shallowMount } from '@vue/test-utils'
-import location from '@/views/location.vue'
+import location from '@/views/axios.vue'
 
 describe('location', () => {
   const wrapper = shallowMount(location)
+  // sessionStorage.setItem('user', 123)
+  // await Vue.nextTick()
   it('测试快照', () => {
     expect(wrapper).toMatchSnapshot()
+  })
+
+  it('init', () => {
+    // wrapper.vm.init()
   })
 })
